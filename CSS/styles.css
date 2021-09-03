@@ -1,0 +1,155 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font: 14px/18px "DM Sans", sans-serif;
+  background-color: #faf8f7;
+}
+
+.siteWrapper > * {
+  text-align: center;
+  min-width: 320px;
+  outline: 1px solid red;
+}
+
+.header {
+  height: 300px;
+  background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+}
+
+.header__logoWrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 45px 0 33px;
+}
+
+.article {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+.article__title {
+  font: 24px/26px "DM Sans", sans-serif;
+  font-weight: 500;
+  color: white;
+  padding: 0 18px;
+}
+
+.article__description {
+  color: #ffe9d5;
+  padding: 0 18px;
+}
+
+.button {
+  font: inherit;
+  font-weight: 700;
+  color: #201e1c;
+  padding: 15.3px 19.4px;
+  background-color: #faf8f7;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+  position: relative;
+  top: 39px;
+}
+
+.button__arrowIcon {
+  margin-left: 10px;
+}
+
+.exchange {
+  padding: 64px 0;
+}
+
+.exchange__image, .exchange__article {
+  margin-bottom: 40px;
+}
+
+.exchange .article__title {
+  font-weight: 600;
+  color: #2e2c28;
+  padding: 0 12px;
+}
+
+.exchange .article__description {
+  font-weight: 500;
+  color: #757575;
+  padding: 0 3px;
+}
+
+.exchange .rates {
+  text-align: left;
+  width: 250px;
+  margin: 0 auto 16px;
+}
+
+.exchange .rates__title {
+  font: 18px/23px "DM Sans", sans-serif;
+  font-weight: 600;
+  color: #f7931a;
+  padding: 0 0 12px 12px;
+}
+
+.exchange .rates .table {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 110px 140px;
+      grid-template-columns: 110px 140px;
+  gap: 1.5px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.28px;
+}
+
+.exchange .rates .table__cell {
+  padding: 10.8px 12px;
+  background-color: #fff;
+}
+
+.exchange .rates .table__cell:first-child {
+  border-top-left-radius: 8px;
+}
+
+.exchange .rates .table__cell:nth-child(2) {
+  border-top-right-radius: 8px;
+}
+
+.exchange .rates .table__cell:nth-last-child(2) {
+  border-bottom-left-radius: 8px;
+}
+
+.exchange .rates .table__cell:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.exchange .rates .table__name {
+  color: #8f8f8f;
+}
+
+.exchange .rates .table__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #757575;
+}
+
+.exchange__infoUpdated {
+  width: 190px;
+  font: 12px/15px "Inter", sans-serif;
+  padding: 8px;
+  background-color: #ffe9d5;
+  border-radius: 8px;
+  margin: 0 auto;
+}

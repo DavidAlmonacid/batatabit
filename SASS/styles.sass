@@ -1,0 +1,122 @@
+@import ./variables
+@import ./responsive
+
+*
+  box-sizing: border-box
+  margin: 0
+
+body
+  font: 14px/18px $DM
+  background-color: $white
+
+.siteWrapper > *
+  text-align: center
+  min-width: 320px
+  outline: 1px solid red // remove
+
+.header
+  height: 300px
+  background: $gradientBg
+
+  &__logoWrapper
+    display: inline-flex
+    margin: 45px 0 33px
+
+.article
+  display: grid
+  gap: 24px
+  padding: 0 16px
+
+  &__title
+    font: 24px/26px $DM
+    font-weight: 500
+    color: white
+    padding: 0 18px
+
+  &__description
+    color: $softOrange
+    padding: 0 18px
+
+.button
+  font: inherit
+  font-weight: 700
+  color: $black
+  padding: 15.3px 19.4px
+  background-color: $white
+  border-radius: 4px
+  border: 0
+  outline: 0
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25)
+  position: relative
+  top: 15px + (48px / 2)
+
+  &__arrowIcon
+    margin-left: 10px
+
+.exchange
+  padding: 64px 0
+
+  &__image, &__article
+    margin-bottom: 40px
+
+  .article
+    &__title
+      font-weight: 600
+      color: $warmBlack
+      padding: 0 12px
+
+    &__description
+      font-weight: 500
+      color: $grey
+      padding: 0 3px
+
+  .rates
+    text-align: left
+    width: 250px
+    margin: 0 auto 16px
+
+    &__title
+      font: 18px/23px $DM
+      font-weight: 600
+      color: $bitcoinOrange
+      padding: 0 0 12px 12px
+
+    .table
+      display: grid
+      grid-template-columns: 110px 140px
+      gap: 1.5px
+      font-family: $inter
+      letter-spacing: -0.28px
+
+      &__cell
+        padding: 10.8px 12px
+        background-color: #fff
+
+        &:first-child
+          border-top-left-radius: 8px
+
+        &:nth-child(2)
+          border-top-right-radius: 8px
+
+        &:nth-last-child(2)
+          border-bottom-left-radius: 8px
+
+        &:last-child
+          border-bottom-right-radius: 8px
+
+      &__name
+        color: $lightGrey
+
+      &__price
+        display: flex
+        align-items: center
+        justify-content: space-around
+        color: $grey
+
+  &__infoUpdated
+    width: 190px
+    font: 12px/15px $inter
+    padding: 8px
+    background-color: $softOrange
+    border-radius: 8px
+    margin: 0 auto

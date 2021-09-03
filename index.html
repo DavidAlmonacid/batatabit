@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Proyecto del curso 'Responsive design: Mobile first layout' | Batatabit layout">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batatabit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body>
+  <div class="siteWrapper">
+    <header class="header">
+      <div class="header__logoWrapper">
+        <img src="https://i.postimg.cc/y6LxS1BJ/logo.png" alt="Logo Batatabit" width="151"
+          height="24">
+      </div>
+
+      <article class="article header__article">
+        <h1 class="article__title">La próxima revolución en el intercambio de
+          criptomonedas.</h1>
+
+        <p class="article__description">Batatabit te ayuda a navegar entre los diferentes
+          precios y tendencias.</p>
+      </article>
+
+      <button class="button header__btn">
+        <span class="button__text">Conoce Nuestros Planes</span>
+
+        <svg class="button__arrowIcon" width="12" height="8" viewBox="0 0 12 8"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.41 -6.16331e-08L6 4.58L10.59 -4.62904e-07L12 1.41L6 7.41L6.16331e-08 1.41L1.41 -6.16331e-08Z"
+            fill="#201e1c" />
+        </svg>
+      </button>
+    </header>
+
+    <main class="mainContent">
+      <section class="exchange">
+        <img class="exchange__image" src="https://i.postimg.cc/CxQfv6nv/bitcoin.png"
+          alt="Bitcoin image" width="195">
+
+        <article class="article exchange__article">
+          <h2 class="article__title">Visibilizamos todas las tasas de cambio.</h2>
+
+          <p class="article__description">Traemos información en tiempo real de las casas
+            de cambio y las monedas más importantes
+            del mundo.</p>
+        </article>
+
+        <div class="rates exchange__rates">
+          <section class="rates__tableWrapper">
+            <h3 class="rates__title">Monedas</h3>
+
+            <div class="table rates__table"></div>
+          </section>
+        </div>
+
+        <p class="exchange__infoUpdated">
+          <strong>Actualizado:</strong>
+          <span>02/09/21 20:00</span>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+    </footer>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
