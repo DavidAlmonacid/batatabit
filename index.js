@@ -1,8 +1,4 @@
-// ;({
-//   plugins: ['jsdom-quokka-plugin'],
-// })
-
-const table = document.querySelector('.table')
+const ratesTable = document.querySelector('.table.rates__table')
 const trendingUp = 'https://i.postimg.cc/8z4fvW3N/trending-up.png'
 const trendingDown = 'https://i.postimg.cc/zffbFvZW/trending-down.png'
 
@@ -14,11 +10,11 @@ const coins = [
 ]
 
 coins.forEach((coin) => {
-  const name = table.appendChild(document.createElement('span'))
+  const name = ratesTable.appendChild(document.createElement('span'))
   name.className = 'table__cell table__name'
   name.textContent = coin.name
 
-  const price = table.appendChild(document.createElement('span'))
+  const price = ratesTable.appendChild(document.createElement('span'))
   price.className = 'table__cell table__price'
 
   const textPrice = price.appendChild(document.createElement('span'))
@@ -30,4 +26,23 @@ coins.forEach((coin) => {
   priceChange.src = coin.priceChange > 0 ? trendingUp : trendingDown
   priceChange.alt = `${coin.name} is trending ${coin.priceChange > 0 ? 'up' : 'down'}`
   priceChange.height = '12'
+})
+
+const comisionsTable = document.querySelector('.table.commissions__table')
+
+const comisions = [
+  { name: 'Bitrade', price: 12.96 },
+  { name: 'Bitpreco', price: 13.07 },
+  { name: 'Novadax', price: 13.15 },
+  { name: 'Coinext', price: 14.96 },
+]
+
+comisions.forEach((comision) => {
+  const name = comisionsTable.appendChild(document.createElement('span'))
+  name.className = 'table__cell table__name'
+  name.textContent = comision.name
+
+  const price = comisionsTable.appendChild(document.createElement('span'))
+  price.className = 'table__cell table__price'
+  price.textContent = `$ ${comision.price.toLocaleString()}`
 })

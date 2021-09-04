@@ -57,7 +57,7 @@ body
   padding: 64px 0
 
   &__image, &__article
-    margin-bottom: 40px
+    margin-bottom: 32px
 
   .article
     &__title
@@ -70,23 +70,36 @@ body
       color: $grey
       padding: 0 3px
 
-  .rates
-    text-align: left
-    width: 250px
-    margin: 0 auto 16px
+  &__tablesWrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
 
+    > [class*='exchange']
+      padding: 0 40px
+
+  .rates, .commissions
     &__title
       font: 18px/23px $DM
       font-weight: 600
       color: $bitcoinOrange
-      padding: 0 0 12px 12px
+      margin: 16px 0
+
+    &__updated
+      width: fit-content
+      font: 12px/15px $inter
+      padding: 8px
+      background-color: $softOrange
+      border-radius: 8px
+      margin: 16px auto
 
     .table
       display: grid
-      grid-template-columns: 110px 140px
+      grid-template-columns: 110px 110px
       gap: 1.5px
       font-family: $inter
       letter-spacing: -0.28px
+      text-align: left
 
       &__cell
         padding: 10.8px 12px
@@ -113,10 +126,9 @@ body
         justify-content: space-around
         color: $grey
 
-  &__infoUpdated
-    width: 190px
-    font: 12px/15px $inter
-    padding: 8px
-    background-color: $softOrange
-    border-radius: 8px
-    margin: 0 auto
+  .commissions
+    &__title
+      color: $secondaryBlue
+
+    &__updated
+      background-color: $softBlue

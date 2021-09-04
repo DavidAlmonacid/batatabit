@@ -70,7 +70,7 @@ body {
 }
 
 .exchange__image, .exchange__article {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .exchange .article__title {
@@ -85,55 +85,76 @@ body {
   padding: 0 3px;
 }
 
-.exchange .rates {
-  text-align: left;
-  width: 250px;
-  margin: 0 auto 16px;
+.exchange__tablesWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.exchange .rates__title {
+.exchange__tablesWrapper > [class*='exchange'] {
+  padding: 0 40px;
+}
+
+.exchange .rates__title, .exchange .commissions__title {
   font: 18px/23px "DM Sans", sans-serif;
   font-weight: 600;
   color: #f7931a;
-  padding: 0 0 12px 12px;
+  margin: 16px 0;
 }
 
-.exchange .rates .table {
+.exchange .rates__updated, .exchange .commissions__updated {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font: 12px/15px "Inter", sans-serif;
+  padding: 8px;
+  background-color: #ffe9d5;
+  border-radius: 8px;
+  margin: 16px auto;
+}
+
+.exchange .rates .table, .exchange .commissions .table {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 110px 140px;
-      grid-template-columns: 110px 140px;
+  -ms-grid-columns: 110px 110px;
+      grid-template-columns: 110px 110px;
   gap: 1.5px;
   font-family: "Inter", sans-serif;
   letter-spacing: -0.28px;
+  text-align: left;
 }
 
-.exchange .rates .table__cell {
+.exchange .rates .table__cell, .exchange .commissions .table__cell {
   padding: 10.8px 12px;
   background-color: #fff;
 }
 
-.exchange .rates .table__cell:first-child {
+.exchange .rates .table__cell:first-child, .exchange .commissions .table__cell:first-child {
   border-top-left-radius: 8px;
 }
 
-.exchange .rates .table__cell:nth-child(2) {
+.exchange .rates .table__cell:nth-child(2), .exchange .commissions .table__cell:nth-child(2) {
   border-top-right-radius: 8px;
 }
 
-.exchange .rates .table__cell:nth-last-child(2) {
+.exchange .rates .table__cell:nth-last-child(2), .exchange .commissions .table__cell:nth-last-child(2) {
   border-bottom-left-radius: 8px;
 }
 
-.exchange .rates .table__cell:last-child {
+.exchange .rates .table__cell:last-child, .exchange .commissions .table__cell:last-child {
   border-bottom-right-radius: 8px;
 }
 
-.exchange .rates .table__name {
+.exchange .rates .table__name, .exchange .commissions .table__name {
   color: #8f8f8f;
 }
 
-.exchange .rates .table__price {
+.exchange .rates .table__price, .exchange .commissions .table__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,11 +166,10 @@ body {
   color: #757575;
 }
 
-.exchange__infoUpdated {
-  width: 190px;
-  font: 12px/15px "Inter", sans-serif;
-  padding: 8px;
-  background-color: #ffe9d5;
-  border-radius: 8px;
-  margin: 0 auto;
+.exchange .commissions__title {
+  color: #1a9af7;
+}
+
+.exchange .commissions__updated {
+  background-color: #e7f5ff;
 }
