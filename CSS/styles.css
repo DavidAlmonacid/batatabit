@@ -12,7 +12,29 @@ body {
 .siteWrapper > * {
   text-align: center;
   min-width: 320px;
-  outline: 1px solid red;
+  outline: 2px solid red;
+}
+
+.mainContent > * {
+  outline: 2px solid purple;
+}
+
+.section {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+.section [class*='title'] {
+  font: 24px/26px "DM Sans", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  padding: 0 18px;
+}
+
+.section [class*='description'] {
+  color: #8f8f8f;
 }
 
 .header {
@@ -27,21 +49,7 @@ body {
   margin: 45px 0 33px;
 }
 
-.article {
-  display: -ms-grid;
-  display: grid;
-  gap: 24px;
-  padding: 0 16px;
-}
-
-.article__title {
-  font: 24px/26px "DM Sans", sans-serif;
-  font-weight: 500;
-  color: white;
-  padding: 0 18px;
-}
-
-.article__description {
+.header__section [class*='description'] {
   color: #ffe9d5;
   padding: 0 18px;
 }
@@ -69,20 +77,19 @@ body {
   padding: 64px 0;
 }
 
-.exchange__image, .exchange__article {
+.exchange__image, .exchange__section {
   margin-bottom: 32px;
 }
 
-.exchange .article__title {
+.exchange__section [class*='title'] {
   font-weight: 600;
-  color: #2e2c28;
+  color: #201e1c;
   padding: 0 12px;
 }
 
-.exchange .article__description {
+.exchange__section [class*='description'] {
   font-weight: 500;
   color: #757575;
-  padding: 0 3px;
 }
 
 .exchange__tablesWrapper {
@@ -172,4 +179,85 @@ body {
 
 .exchange .commissions__updated {
   background-color: #e7f5ff;
+}
+
+.features {
+  padding: 64px 0;
+  background-color: #201e1c;
+}
+
+.features__batatabitIcon {
+  position: relative;
+  top: -76.5px;
+}
+
+.features__section {
+  padding-bottom: 16px;
+}
+
+.features__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 721.45px;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.features__cardContainer {
+  max-width: 336.712px;
+  background-color: #2e2c28;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  margin: 8px;
+}
+
+.features .card {
+  gap: 10px;
+  text-align: left;
+  padding: 14px 20px 22px 16px;
+}
+
+.features .card__title {
+  font: 18px/18px "DM Sans", sans-serif;
+  padding: 0;
+}
+
+.bitcoinEyes__section {
+  height: 370px;
+  background: center/cover no-repeat url("https://i.postimg.cc/dty92gFZ/bitcoin-eyes-small.jpg");
+}
+
+.bitcoinEyes__section [class*='title'] {
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.84);
+  margin-top: 48.5px;
+}
+
+@media screen and (min-width: 600px) {
+  .bitcoinEyes__section [class*='title'] {
+    font: 28px/30px "DM Sans", sans-serif;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 834px) {
+  .bitcoinEyes__section {
+    height: 299px;
+    background: center/cover no-repeat url("https://i.postimg.cc/B6kcKfh6/bitcoin-eyes-big.jpg");
+  }
+  .bitcoinEyes__section [class*='title'] {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font: 32px/34px "DM Sans", sans-serif;
+    font-weight: 600;
+    margin: 0;
+  }
 }
