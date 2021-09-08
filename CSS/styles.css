@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 14px/18px "DM Sans", sans-serif;
   background-color: #faf8f7;
@@ -19,21 +23,20 @@ body {
   outline: 2px solid purple;
 }
 
-.section {
+.header__feature, .exchange__feature, .plans__feature, .benefits__feature, .benefits .card, .bitcoinEyes {
   display: -ms-grid;
   display: grid;
   gap: 24px;
   padding: 0 16px;
 }
 
-.section [class*='title'] {
+.header__title, .exchange__title, .plans__title, .benefits__title, .benefits .card__title, .bitcoinEyes__title {
   font: 24px/26px "DM Sans", sans-serif;
   font-weight: 500;
   color: #fff;
-  padding: 0 18px;
 }
 
-.section [class*='description'] {
+.header__description, .exchange__description, .plans__description, .benefits__description, .benefits .card__description {
   color: #8f8f8f;
 }
 
@@ -49,27 +52,29 @@ body {
   margin: 45px 0 33px;
 }
 
-.header__section [class*='description'] {
-  color: #ffe9d5;
+.header__title {
   padding: 0 18px;
 }
 
-.button {
-  font: inherit;
+.header__description {
+  color: #ffe9d5;
+}
+
+.header .button {
+  display: inline-block;
+  text-decoration: none;
   font-weight: 700;
   color: #201e1c;
   padding: 15.3px 19.4px;
   background-color: #faf8f7;
   border-radius: 4px;
-  border: 0;
-  outline: 0;
-  -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
-          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+  -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
   position: relative;
-  top: 39px;
+  top: 39.58px;
 }
 
-.button__arrowIcon {
+.header .button__arrowIcon {
   margin-left: 10px;
 }
 
@@ -77,22 +82,21 @@ body {
   padding: 64px 0;
 }
 
-.exchange__image, .exchange__section {
+.exchange__image, .exchange__feature {
   margin-bottom: 32px;
 }
 
-.exchange__section [class*='title'] {
+.exchange__title, .plans__title {
   font-weight: 600;
   color: #201e1c;
-  padding: 0 12px;
 }
 
-.exchange__section [class*='description'] {
+.exchange__description, .plans__description {
   font-weight: 500;
   color: #757575;
 }
 
-.exchange__tablesWrapper {
+.exchange__tablesWrapper, .benefits__cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +107,7 @@ body {
           justify-content: center;
 }
 
-.exchange__tablesWrapper > [class*='exchange'] {
+.exchange__tablesWrapper > [class*='exchange'], .benefits__cards > [class*='exchange'] {
   padding: 0 40px;
 }
 
@@ -181,83 +185,84 @@ body {
   background-color: #e7f5ff;
 }
 
-.features {
+.plans {
+  padding: 64px 0;
+}
+
+.plans__feature {
+  margin-bottom: 34px;
+}
+
+.benefits {
   padding: 64px 0;
   background-color: #201e1c;
 }
 
-.features__batatabitIcon {
+.benefits__batatabitIcon {
   position: relative;
   top: -76.5px;
 }
 
-.features__section {
+.benefits__feature {
   padding-bottom: 16px;
 }
 
-.features__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.benefits__cards {
   max-width: 721.45px;
   padding: 8px;
   margin: 0 auto;
 }
 
-.features__cardContainer {
+.benefits__cardContainer {
   max-width: 336.712px;
   background-color: #2e2c28;
   border-radius: 4px;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
   margin: 8px;
 }
 
-.features .card {
+.benefits .card {
   gap: 10px;
   text-align: left;
   padding: 14px 20px 22px 16px;
 }
 
-.features .card__title {
-  font: 18px/18px "DM Sans", sans-serif;
+.benefits .card__title {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.bitcoinEyes {
+  height: 370px;
+  background: center/cover no-repeat url("https://i.postimg.cc/dty92gFZ/bitcoin-eyes-small.jpg");
   padding: 0;
 }
 
-.bitcoinEyes__section {
-  height: 370px;
-  background: center/cover no-repeat url("https://i.postimg.cc/dty92gFZ/bitcoin-eyes-small.jpg");
-}
-
-.bitcoinEyes__section [class*='title'] {
+.bitcoinEyes__title {
   font-weight: 600;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.84);
-  margin-top: 48.5px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
+  padding: 49px 0 0;
 }
 
 @media screen and (min-width: 600px) {
-  .bitcoinEyes__section [class*='title'] {
-    font: 28px/30px "DM Sans", sans-serif;
-    font-weight: 600;
+  .bitcoinEyes__title {
+    font-size: 28px;
+    line-height: 30px;
   }
 }
 
 @media screen and (min-width: 834px) {
-  .bitcoinEyes__section {
+  .bitcoinEyes {
     height: 299px;
     background: center/cover no-repeat url("https://i.postimg.cc/B6kcKfh6/bitcoin-eyes-big.jpg");
   }
-  .bitcoinEyes__section [class*='title'] {
+  .bitcoinEyes__title {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    font: 32px/34px "DM Sans", sans-serif;
-    font-weight: 600;
-    margin: 0;
+    font-size: 32px;
+    line-height: 34px;
+    padding: 0;
   }
 }

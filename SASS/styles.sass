@@ -1,20 +1,6 @@
-@import ./variables
-@import ./resets
-
-// Main blocks
-.section
-  display: grid
-  gap: 24px
-  padding: 0 16px
-
-  [class*='title']
-    font: 24px/26px $DM
-    font-weight: 500
-    color: #fff
-    padding: 0 18px
-
-  [class*='description']
-    color: $lightGrey
+@import 'variables'
+@import 'resets'
+@import 'blocks'
 
 .header
   height: 300px
@@ -24,42 +10,50 @@
     display: inline-flex
     margin: 45px 0 33px
 
-  &__section
-    [class*='description']
-      color: $softOrange
-      padding: 0 18px
+  &__feature
+    @extend %feature
 
-.button
-  font: inherit
-  font-weight: 700
-  color: $black
-  padding: 15.3px 19.4px
-  background-color: $white
-  border-radius: 4px
-  border: 0
-  outline: 0
-  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25)
-  position: relative
-  top: 15px + (48px / 2)
+  &__title
+    @extend %feature-title
+    padding: 0 18px
 
-  &__arrowIcon
-    margin-left: 10px
+  &__description
+    @extend %feature-description
+    color: $softOrange
+
+  .button
+    display: inline-block
+    text-decoration: none
+    font-weight: 700
+    color: $black
+    padding: 15.3px 19.4px
+    background-color: $white
+    border-radius: 4px
+    box-shadow: $lightShadow
+    position: relative
+    top: 15.58px + (48px / 2)
+
+    &__arrowIcon
+      margin-left: 10px
 
 .exchange
   padding: 64px 0
 
-  &__image, &__section
+  &__image, &__feature
     margin-bottom: 32px
 
-  &__section
-    [class*='title']
-      font-weight: 600
-      color: $black
-      padding: 0 12px
+  &__feature
+    @extend %feature
 
-    [class*='description']
-      font-weight: 500
-      color: $grey
+  &__title
+    @extend %feature-title
+    font-weight: 600
+    color: $black
+
+  &__description
+    @extend %feature-description
+    font-weight: 500
+    color: $grey
 
   &__tablesWrapper
     display: flex
@@ -124,7 +118,20 @@
     &__updated
       background-color: $softBlue
 
-.features
+.plans
+  padding: 64px 0
+
+  &__feature
+    @extend %feature
+    margin-bottom: 34px
+
+  &__title
+    @extend .exchange__title
+
+  &__description
+    @extend .exchange__description
+
+.benefits
   padding: 64px 0
   background-color: $black
 
@@ -132,13 +139,18 @@
     position: relative
     top: -((25px / 2) + 64)
 
-  &__section
+  &__feature
+    @extend %feature
     padding-bottom: 16px
 
+  &__title
+    @extend %feature-title
+
+  &__description
+    @extend %feature-description
+
   &__cards
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
+    @extend .exchange__tablesWrapper
     max-width: 721.45px
     padding: 8px
     margin: 0 auto
@@ -147,41 +159,47 @@
     max-width: 336.712px
     background-color: $warmBlack
     border-radius: 4px
-    box-shadow: 0 4px 8px rgba(#000, 0.16)
+    box-shadow: $darkShadow
     margin: 8px
 
   .card
+    @extend %feature
     gap: 10px
     text-align: left
     padding: 14px 20px 22px 16px
 
     &__title
-      font: 18px/18px $DM
-      padding: 0
+      @extend %feature-title
+      font-size: 18px
+      line-height: 18px
+
+    &__description
+      @extend %feature-description
 
 .bitcoinEyes
-  &__section
-    height: 370px
-    background: center/cover no-repeat url('https://i.postimg.cc/dty92gFZ/bitcoin-eyes-small.jpg')
+  @extend %feature
+  height: 370px
+  background: center/cover no-repeat url('https://i.postimg.cc/dty92gFZ/bitcoin-eyes-small.jpg')
+  padding: 0
 
-    [class*='title']
-      font-weight: 600
-      text-shadow: 0 0 8px rgba(#000, 0.84)
-      margin-top: 48.5px
+  &__title
+    @extend %feature-title
+    font-weight: 600
+    text-shadow: $darkShadow
+    padding: 49px 0 0
 
 @media screen and ( min-width: 600px )
-  .bitcoinEyes__section [class*='title']
-    font: 28px/30px $DM
-    font-weight: 600
+  .bitcoinEyes__title
+    font-size: 28px
+    line-height: 30px
 
 @media screen and ( min-width: 834px )
   .bitcoinEyes
-    &__section
-      height: 299px
-      background: center/cover no-repeat url('https://i.postimg.cc/B6kcKfh6/bitcoin-eyes-big.jpg')
+    height: 299px
+    background: center/cover no-repeat url('https://i.postimg.cc/B6kcKfh6/bitcoin-eyes-big.jpg')
 
-      [class*='title']
-        align-self: center
-        font: 32px/34px $DM
-        font-weight: 600
-        margin: 0
+    &__title
+      align-self: center
+      font-size: 32px
+      line-height: 34px
+      padding: 0
