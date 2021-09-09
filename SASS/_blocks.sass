@@ -1,3 +1,4 @@
+// feature block
 %feature
   display: grid
   gap: 24px
@@ -6,7 +7,23 @@
   &-title
     font: 24px/26px $DM
     font-weight: 500
-    color: #fff
+    color: $white
 
   &-description
     color: $lightGrey
+
+// button block
+%button
+  display: flex
+  align-items: center
+  width: fit-content
+  text-decoration: none
+  font-weight: 700
+  color: $black
+  padding: 15.31px 19.04px
+  background-color: $white
+  border-radius: 4px
+  margin: 0 auto
+
+  &-icon
+    margin-left: 14px

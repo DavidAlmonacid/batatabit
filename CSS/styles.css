@@ -10,7 +10,7 @@ html {
 
 body {
   font: 14px/18px "DM Sans", sans-serif;
-  background-color: #faf8f7;
+  background-color: #ece3df;
 }
 
 .siteWrapper > * {
@@ -23,7 +23,7 @@ body {
   outline: 2px solid purple;
 }
 
-.header__feature, .exchange__feature, .plans__feature, .benefits__feature, .benefits .card, .bitcoinEyes {
+.header__feature, .exchange__feature, .benefits__feature, .benefits .card, .bitcoinEyes, .plans__feature, .plans .card {
   display: -ms-grid;
   display: grid;
   gap: 24px;
@@ -33,11 +33,34 @@ body {
 .header__title, .exchange__title, .plans__title, .benefits__title, .benefits .card__title, .bitcoinEyes__title {
   font: 24px/26px "DM Sans", sans-serif;
   font-weight: 500;
-  color: #fff;
+  color: #ece3df;
 }
 
 .header__description, .exchange__description, .plans__description, .benefits__description, .benefits .card__description {
   color: #8f8f8f;
+}
+
+.header .button, .plans .card .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: 700;
+  color: #201e1c;
+  padding: 15.31px 19.04px;
+  background-color: #ece3df;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.header .button__arrowIcon, .plans .card .button__arrowIcon {
+  margin-left: 14px;
 }
 
 .header {
@@ -61,21 +84,10 @@ body {
 }
 
 .header .button {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 700;
-  color: #201e1c;
-  padding: 15.3px 19.4px;
-  background-color: #faf8f7;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
-          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+  -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
   position: relative;
   top: 39.58px;
-}
-
-.header .button__arrowIcon {
-  margin-left: 10px;
 }
 
 .exchange {
@@ -138,6 +150,7 @@ body {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.28px;
   text-align: left;
+  color: #757575;
 }
 
 .exchange .rates .table__cell, .exchange .commissions .table__cell {
@@ -161,10 +174,6 @@ body {
   border-bottom-right-radius: 8px;
 }
 
-.exchange .rates .table__name, .exchange .commissions .table__name {
-  color: #8f8f8f;
-}
-
 .exchange .rates .table__price, .exchange .commissions .table__price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,7 +183,6 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #757575;
 }
 
 .exchange .commissions__title {
@@ -183,14 +191,6 @@ body {
 
 .exchange .commissions__updated {
   background-color: #e7f5ff;
-}
-
-.plans {
-  padding: 64px 0;
-}
-
-.plans__feature {
-  margin-bottom: 34px;
 }
 
 .benefits {
@@ -217,8 +217,8 @@ body {
   max-width: 336.712px;
   background-color: #2e2c28;
   border-radius: 4px;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   margin: 8px;
 }
 
@@ -241,14 +241,106 @@ body {
 
 .bitcoinEyes__title {
   font-weight: 600;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 49px 0 0;
+}
+
+.plans {
+  padding: 64px 0;
+}
+
+.plans__feature {
+  margin-bottom: 48px;
+}
+
+.plans__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  -ms-scroll-snap-type: x;
+      scroll-snap-type: x;
+  padding: 0 8px 16px;
+}
+
+.plans__cards > :last-child {
+  padding-right: 24px;
+}
+
+.plans__cardContainer {
+  color: #201e1c;
+  padding-left: 24px;
+}
+
+.plans__cardContainer--recommended::before {
+  content: 'Recomendado';
+  font: 12px/15px "Inter", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px;
+  background-color: #f7931a;
+  border-radius: 8px;
+  position: relative;
+  top: 6.955px;
+}
+
+.plans .card {
+  gap: 12px;
+  scroll-snap-align: center;
+  width: 190px;
+  padding: 26px 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+}
+
+.plans .card__title {
+  font: inherit;
+  font-weight: 600;
+}
+
+.plans .card__priceSymbol {
+  font: 12px/15px "Inter", sans-serif;
+  font-weight: 500;
+  position: relative;
+  top: -23.5px;
+}
+
+.plans .card__priceNumber {
+  font: 52px/63px "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -4.16px;
+}
+
+.plans .card__description {
+  font: 12px/15px "Inter", sans-serif;
+  font-weight: 500;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.plans .card .button {
+  padding: 13.31px 17.04px;
+  border: 2px solid #f7931a;
 }
 
 @media screen and (min-width: 600px) {
   .bitcoinEyes__title {
     font-size: 28px;
     line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 682px) {
+  .plans__cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
