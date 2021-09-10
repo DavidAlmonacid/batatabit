@@ -30,6 +30,9 @@
     &__arrowIcon
       @extend %button-icon
 
+    &:hover
+      box-shadow: $darkShadow
+
 .exchange
   padding: 64px 0
 
@@ -157,7 +160,7 @@
 .bitcoinEyes
   @extend %feature
   height: 370px
-  background: center/cover no-repeat url('https://i.postimg.cc/dty92gFZ/bitcoin-eyes-small.jpg')
+  background: center/cover no-repeat url('https://i.postimg.cc/vZbmSDXN/bitcoin-eyes-small.jpg')
   padding: 0
 
   &__title
@@ -182,17 +185,14 @@
   &__cards
     display: flex
     align-items: flex-end
+    gap: 20px
+    padding: 0 32px 16px
     overflow-x: auto
-    overscroll-behavior: contain
-    scroll-snap-type: x
-    padding: 0 8px 16px
-
-  &__cards > :last-child
-    padding-right: 24px
+    scroll-snap-type: x proximity
 
   &__cardContainer
     color: $black
-    padding-left: 24px
+    scroll-snap-align: center
 
     &--recommended::before
       content: 'Recomendado'
@@ -208,12 +208,15 @@
   .card
     @extend %feature
     gap: 12px
-    scroll-snap-align: center
-    width: 190px
+    min-width: 190px
+    max-width: 223px
     padding: 26px 16px
     background-color: #fff
     border-radius: 8px
     box-shadow: $lightShadow
+
+    &:hover
+      box-shadow: $darkShadow
 
     &__title
       font: inherit
@@ -239,17 +242,46 @@
     .button
       @extend %button
       padding: 13.31px 17.04px
+      background-color: $softOrange
       border: 2px solid $bitcoinOrange
 
       &__arrowIcon
         @extend %button-icon
+
+.footer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: $white
+  padding: 36px 32px
+  background-color: $warmBlack
+
+  &__networks
+    @extend %feature
+    gap: 12px
+    padding: 0
+
+  &__network
+    display: flex
+    align-items: center
+    text-decoration: none
+    color: inherit
+
+  &__networkIcon
+    margin-right: 10px
+
+  &__brand
+    font-size: 12px
 
 @media screen and ( min-width: 600px )
   .bitcoinEyes__title
     font-size: 28px
     line-height: 30px
 
-@media screen and ( min-width: 682px )
+  .footer
+    justify-content: space-around
+
+@media screen and ( min-width: 674px )
   .plans__cards
     justify-content: center
 
