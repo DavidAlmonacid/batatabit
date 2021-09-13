@@ -1,5 +1,2 @@
 .vscode
 .prettierignore
-
-/node_modules/
-*.json
