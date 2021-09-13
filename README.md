@@ -8,7 +8,7 @@ Project from Platzi's [Responsive Design: Maquetación Mobile First](https://pla
 
 - Mobile-first Workflow
 - BEM Methodology
-- SASS preprocessor
+- Sass preprocessor
 - CSS Grid
 - CSS Flexbox
 - Semantic HTML
