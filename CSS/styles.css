@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
 
@@ -13,35 +13,52 @@ body {
   background-color: #ece3df;
 }
 
-.siteWrapper > * {
+.siteWrapper>* {
   text-align: center;
   min-width: 320px;
 }
 
-.header__feature, .exchange__feature, .benefits__feature, .benefits .card, .bitcoinEyes, .plans__feature, .plans .card, .footer__networks {
+.header__feature,
+.exchange__feature,
+.benefits__feature,
+.benefits .card,
+.bitcoinEyes,
+.plans__feature,
+.plans .card,
+.footer__networks {
   display: -ms-grid;
   display: grid;
   gap: 24px;
   padding: 0 16px;
 }
 
-.header__title, .exchange__title, .plans__title, .benefits__title, .benefits .card__title, .bitcoinEyes__title {
+.header__title,
+.exchange__title,
+.plans__title,
+.benefits__title,
+.benefits .card__title,
+.bitcoinEyes__title {
   font: 24px/26px "DM Sans", sans-serif;
   font-weight: 500;
   color: #ece3df;
 }
 
-.header__description, .exchange__description, .plans__description, .benefits__description, .benefits .card__description {
+.header__description,
+.exchange__description,
+.plans__description,
+.benefits__description,
+.benefits .card__description {
   color: #8f8f8f;
 }
 
-.header .button, .plans .card .button {
+.header .button,
+.plans .card .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -54,7 +71,8 @@ body {
   margin: 0 auto;
 }
 
-.header .button__arrowIcon, .plans .card .button__arrowIcon {
+.header .button__arrowIcon,
+.plans .card .button__arrowIcon {
   margin-left: 14px;
 }
 
@@ -80,57 +98,64 @@ body {
 
 .header .button {
   -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
-          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
   position: relative;
   top: 39.58px;
 }
 
 .header .button:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .exchange {
   padding: 64px 0;
 }
 
-.exchange__image, .exchange__feature {
+.exchange__image,
+.exchange__feature {
   margin-bottom: 32px;
 }
 
-.exchange__title, .plans__title {
+.exchange__title,
+.plans__title {
   font-weight: 600;
   color: #201e1c;
 }
 
-.exchange__description, .plans__description {
+.exchange__description,
+.plans__description {
   font-weight: 500;
   color: #757575;
 }
 
-.exchange__tablesWrapper, .benefits__cards {
+.exchange__tablesWrapper,
+.benefits__cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.exchange__tablesWrapper > [class*='exchange'], .benefits__cards > [class*='exchange'] {
+.exchange__tablesWrapper>[class*='exchange'],
+.benefits__cards>[class*='exchange'] {
   padding: 0 40px;
 }
 
-.exchange .rates__title, .exchange .commissions__title {
+.exchange .rates__title,
+.exchange .commissions__title {
   font: 18px/23px "DM Sans", sans-serif;
   font-weight: 600;
   color: #f7931a;
   margin: 16px 0;
 }
 
-.exchange .rates__updated, .exchange .commissions__updated {
+.exchange .rates__updated,
+.exchange .commissions__updated {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -141,11 +166,12 @@ body {
   margin: 16px auto;
 }
 
-.exchange .rates .table, .exchange .commissions .table {
+.exchange .rates .table,
+.exchange .commissions .table {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 110px 110px;
-      grid-template-columns: 110px 110px;
+  grid-template-columns: 110px 110px;
   gap: 1.5px;
   font-family: "Inter", sans-serif;
   letter-spacing: -0.28px;
@@ -153,36 +179,42 @@ body {
   color: #757575;
 }
 
-.exchange .rates .table__cell, .exchange .commissions .table__cell {
+.exchange .rates .table__cell,
+.exchange .commissions .table__cell {
   padding: 10.8px 12px;
   background-color: #fff;
 }
 
-.exchange .rates .table__cell:first-child, .exchange .commissions .table__cell:first-child {
+.exchange .rates .table__cell:first-child,
+.exchange .commissions .table__cell:first-child {
   border-top-left-radius: 8px;
 }
 
-.exchange .rates .table__cell:nth-child(2), .exchange .commissions .table__cell:nth-child(2) {
+.exchange .rates .table__cell:nth-child(2),
+.exchange .commissions .table__cell:nth-child(2) {
   border-top-right-radius: 8px;
 }
 
-.exchange .rates .table__cell:nth-last-child(2), .exchange .commissions .table__cell:nth-last-child(2) {
+.exchange .rates .table__cell:nth-last-child(2),
+.exchange .commissions .table__cell:nth-last-child(2) {
   border-bottom-left-radius: 8px;
 }
 
-.exchange .rates .table__cell:last-child, .exchange .commissions .table__cell:last-child {
+.exchange .rates .table__cell:last-child,
+.exchange .commissions .table__cell:last-child {
   border-bottom-right-radius: 8px;
 }
 
-.exchange .rates .table__price, .exchange .commissions .table__price {
+.exchange .rates .table__price,
+.exchange .commissions .table__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .exchange .commissions__title {
@@ -218,7 +250,7 @@ body {
   background-color: #2e2c28;
   border-radius: 4px;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   margin: 8px;
 }
 
@@ -235,7 +267,7 @@ body {
 
 .bitcoinEyes {
   height: 370px;
-  background: center/cover no-repeat url("https://i.postimg.cc/vZbmSDXN/bitcoin-eyes-small.jpg");
+  background: center/cover no-repeat url("https://i.imgur.com/U9xhcPm.jpg");
   padding: 0;
 }
 
@@ -258,13 +290,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   gap: 20px;
   padding: 0 32px 16px;
   overflow-x: auto;
   -ms-scroll-snap-type: x proximity;
-      scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
 }
 
 .plans__cardContainer {
@@ -292,12 +324,12 @@ body {
   background-color: #fff;
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
-          box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.25);
 }
 
 .plans .card:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .plans .card__title {
@@ -336,11 +368,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   color: #ece3df;
   padding: 36px 32px;
   background-color: #2e2c28;
@@ -356,8 +388,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-decoration: none;
   color: inherit;
 }
@@ -375,29 +407,31 @@ body {
     font-size: 28px;
     line-height: 30px;
   }
+
   .footer {
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
 @media screen and (min-width: 674px) {
   .plans__cards {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 834px) {
   .bitcoinEyes {
     height: 299px;
-    background: center/cover no-repeat url("https://i.postimg.cc/B6kcKfh6/bitcoin-eyes-big.jpg");
+    background: center/cover no-repeat url("https://i.imgur.com/iYzy4t6.jpg");
   }
+
   .bitcoinEyes__title {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     font-size: 32px;
     line-height: 34px;
     padding: 0;

@@ -1,6 +1,6 @@
 const ratesTable = document.querySelector('.table.rates__table')
-const trendingUp = 'https://i.postimg.cc/8z4fvW3N/trending-up.png'
-const trendingDown = 'https://i.postimg.cc/zffbFvZW/trending-down.png'
+const trendingUp = 'https://i.imgur.com/fylrdkf.png'
+const trendingDown = 'https://i.imgur.com/L6Zmxm5.png'
 
 const coins = [
   { name: 'Bitcoin', price: 48738, priceChange: -0.162 },

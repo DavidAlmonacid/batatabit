@@ -2,7 +2,7 @@
 
 Project from Platzi's [Responsive Design: Maquetación Mobile First](https://platzi.com/clases/mobile-first) course.
 
-![batatabit.png](https://i.postimg.cc/bw4R7xhM/batatabit.png)
+![batatabit.png](https://i.imgur.com/s07ZYzL.png)
 
 ## Built with
 
